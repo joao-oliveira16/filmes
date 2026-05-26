@@ -73,10 +73,11 @@ const styles = StyleSheet.create({
     width: "100%"
   },
   imageBanner:{
-    width: "50%",
-    height: "50%",
+    width: "70%",
+    height: "40%",
     marginTop: 15,
-    borderRadius: 10,
+    borderRadius: 20,
+   
   },
   textBanner: {
     color: 'white',
