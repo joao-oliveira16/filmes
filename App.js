@@ -1,8 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
+
 import { StyleSheet, Text, View , TouchableOpacity, TextInput, Image} from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
 import Header from './src/componentes/Header';
 import Search from './src/componentes/Search';
+import Banner from './src/componentes/banner';
+import movies from './moveis.js'
+
 
 export default function App() {
   return (
@@ -15,10 +18,31 @@ export default function App() {
       <Search></Search>
 
           {/* Inicio do banner */}
-    
-    <Text style={styles.textBanner}> Em cartaz </Text>
+      <Banner></Banner>
 
-    <Image source={require('./assets/neymar.jpg')} style={styles.imageBanner}/>
+      <View style ={{width:'90%'}}>
+
+  <Flatlist
+
+  horizontal={true}
+  data={movies}
+  keyExtractor={(item)=> item.id}
+  renderItem={([item]) => (
+
+<TouchableOpacity>
+
+<image style ={{ width:80, height: 100}}source={{uri: item.imagem}}></image>
+<Text>{item.nome}</Text>
+
+</TouchableOpacity>
+
+)}
+
+
+    />
+
+
+</View>
 
     </View>
 
@@ -33,18 +57,5 @@ const styles = StyleSheet.create({
   },
   
   
-  imageBanner:{
-    width: "60%",
-    height: "90%",
-    marginTop: 15,
-    borderRadius: 20,
-   
-  },
-  textBanner: {
-    color: 'white',
-    width: '90%',
-    fontSize: 30,
-    marginTop:20,
-    fontWeight:'bold',
-  }
+ 
 });
