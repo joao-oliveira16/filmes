@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
 
 imageBanner:{
     width: "90%",
-    height: "60%",
+    height: 200,
     marginTop: 15,
     borderRadius: 20,
     marginBottom:20
@@ -17,8 +17,12 @@ imageBanner:{
     fontSize: 30,
     marginTop:20,
     fontWeight:'bold',
+
+
   }
 
+
+  
 },
 )
 
