@@ -4,6 +4,7 @@ import { StyleSheet, Text, View , TouchableOpacity, TextInput, Image, FlatList} 
 import Header from './src/componentes/Header'
 import Search from './src/componentes/Search'
 import Banner from './src/componentes/Banner'
+import CardMovies from './src/componentes/CardMovies'
 import movies from './moveis'
 
 
@@ -19,6 +20,9 @@ export default function App() {
 
       <Banner></Banner>
 
+       <CardMovies></CardMovies>
+
+
       <View style ={{width:'90%'}}>
 
   <FlatList
@@ -28,14 +32,13 @@ export default function App() {
   keyExtractor={(item)=> item.id}
   renderItem={({item}) => (
 
- <TouchableOpacity style={styles.containerFilmes}>
+  <CardMovies
+    titulo = {item.nome }
+    imagem = {item.imagem}
+    nota = {item.nota}
+  
+  />
 
- <Image style={styles.images} source={{ uri: item.imagem}} />
- <Text style ={styles.titulo}>{item.nome} </Text> 
- 
-<Text style ={styles.textNota}> {item.nota} </Text>
-
-</TouchableOpacity>
 )}
 
 
@@ -50,40 +53,13 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+
   container: {
     flex: 1,
     backgroundColor: '#1E1E1E',
     alignItems: 'center',
   },
   
-  containerFilmes:{
- paddingTop:20,
- paddingBottom:16,
- paddingRight:16,
- width:140,
- heigh:28
- },
-
-titulo:{
-color: '#fff',
- fontSize:12,
- paddingTop:8 
-},
-
- textNota:{
- fontSize:10,
- color:'#fff',
- paddingLeft:4
- },
-
- images:{
- width:'100%',
- height:170,
- borderRadius: 8,
-
- }
-
-
 });
   
  
