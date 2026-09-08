@@ -20,7 +20,7 @@ const DATA = [
     {
       id: "04",
       nome: "Dragon Ball Super",
-      nota: 8.3,
+      nota: 8.5,
       imagem: "https://cinepop.com.br/wp-content/uploads/2018/08/dragonball_1.jpg",
     },
     {

@@ -8,7 +8,8 @@
     paddingBottom:16,
     paddingRight:16,
     width:140,
-    heigh:28
+    heigh:28,
+    marginLeft:10
   },
   titulo:{
    color: '#fff',

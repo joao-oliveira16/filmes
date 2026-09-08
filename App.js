@@ -20,8 +20,6 @@ export default function App() {
 
       <Banner></Banner>
 
-       <CardMovies></CardMovies>
-
 
       <View style ={{width:'90%'}}>
 

@@ -6,7 +6,7 @@ import styles from "./styles";
 export default function CardMovies ({titulo,nota,imagem}){
 
     return (
-        <TouchableOpacity style = {styles.conteinerJogos}>
+        <TouchableOpacity style = {styles.containerFilmes}>
 
             <Image style={styles.images} source={{uri: imagem}} />
             <Text style={styles.titulo}>{titulo}</Text>
