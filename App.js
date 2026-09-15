@@ -6,46 +6,55 @@ import Search from './src/componentes/Search'
 import Banner from './src/componentes/Banner'
 import CardMovies from './src/componentes/CardMovies'
 import movies from './moveis'
+import Rotas from './src/componentes/Rotas';
 
+
+//export default function App() {
+
+  //return (
+
+    //<Rotas></Rotas>
+ // )
+ // }
 
 export default function App() {
   return (
     <View style={styles.container}>
 
-      {/*INICIO DA HEADER*/}
-      <Header></Header>
-    
-    {/*INICIO DA BARRA DE PESQUISA*/}
-      <Search></Search>
-
-      <Banner></Banner>
-
-
-      <View style ={{width:'90%'}}>
-
-  <FlatList
- showsVerticalScrollIndicator= {false}
-  horizontal={true}
-  data={movies}
-  keyExtractor={(item)=> item.id}
-  renderItem={({item}) => (
-
-  <CardMovies
-    titulo = {item.nome }
-    imagem = {item.imagem}
-    nota = {item.nota}
+    {/*INICIO DA HEADER*/}
+    <Header></Header>
   
-  />
+  {/*INICIO DA BARRA DE PESQUISA*/}
+    <Search></Search>
+
+    <Banner></Banner>
+
+
+    <View style ={{width:'90%'}}>
+
+<FlatList
+showsVerticalScrollIndicator= {false}
+horizontal={true}
+data={movies}
+keyExtractor={(item)=> item.id}
+renderItem={({item}) => (
+
+<CardMovies
+  titulo = {item.nome }
+  imagem = {item.imagem}
+  nota = {item.nota}
+
+/>
 
 )}
 
 
-    />
+  />
 
 
 </View>
 
-    </View>
+  </View>
 
   );
 }
