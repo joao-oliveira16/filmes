@@ -1,6 +1,7 @@
-import { BaseNavigationContainer, NavigationContainer } from "@react-navigation/native";
+import {  NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Detalhes from "../Telas/Detalhes";
+import Home from "../Home";
 
 export default function Rotas(){
 
@@ -11,6 +12,7 @@ export default function Rotas(){
 
        <Stack.Navigator>
 
+        <Stack.Screen component={Home} name='Home' />
         <Stack.Screen  component={Detalhes} name='Detalhes'/>
 
        </Stack.Navigator>

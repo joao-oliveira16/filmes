@@ -1,0 +1,16 @@
+{
+  "name": "filmes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "expo": "^57.0.24",
+    "react-dom": "19.2.3"
+  }
+}
