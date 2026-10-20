@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "filmes",
-    "slug": "filmes",
+    "name": "meu-app",
+    "slug": "meu-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
